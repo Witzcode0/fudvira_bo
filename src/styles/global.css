@@ -1,0 +1,87 @@
+/* ========== Root Variables ========== */
+:root {
+  --dark-green: #36a03d;
+  --light-green: #7ecb2a;
+  --dark: #333;
+  --white: #ffffff;
+
+  --max-width: 1200px;
+
+  --font-primary: "Poppins", sans-serif;
+
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+}
+
+
+/* ========== Reset Styles ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== Global Body Style ========== */
+body {
+  font-family: var(--font-primary);
+  color: var(--dark);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+/* ========== Layout Container ========== */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ========== Links ========== */
+a {
+  text-decoration: none;
+  color: var(--dark);
+  transition: var(--transition-fast);
+}
+
+a:hover {
+  color: var(--dark-green);
+}
+
+li{
+    list-style-type: none;
+}
+
+/* ========== Buttons ========== */
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: var(--font-primary);
+  transition: var(--transition-medium);
+}
+
+/* Example Primary Button */
+.btn-primary {
+  background: var(--dark-green);
+  color: var(--white);
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* ========== Headings ========== */
+h1, h2, h3, h4 {
+  color: var(--light-green);
+  font-weight: 600;
+}
+
+/* ========== Images ========== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
