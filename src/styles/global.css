@@ -60,17 +60,46 @@ button {
   transition: var(--transition-medium);
 }
 
-/* Example Primary Button */
-.btn-primary {
-  background: var(--dark-green);
-  color: var(--white);
-  padding: 10px 18px;
-  border-radius: 6px;
-  font-weight: 500;
+/* =========================================================
+   GLOBAL BUTTON STYLES
+   ========================================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 12px 26px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
+/* Filled Primary Button */
+.btn-primary {
+  background: var(--dark-green);
+  color: #fff;
+  border: none;
+}
 .btn-primary:hover {
-  opacity: 0.9;
+  background: var(--dark-green);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* Outline Primary Button */
+.btn-outline-primary {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+.btn-outline-primary:hover {
+  background: var(--dark-green);
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 /* ========== Headings ========== */
