@@ -27,7 +27,9 @@ body {
   color: var(--dark);
   background-color: var(--white);
   line-height: 1.6;
+  padding-top: 130px;
 }
+
 
 /* ========== Layout Container ========== */
 .container {
@@ -113,4 +115,60 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+
+/* 🌍 SECTION BASE */
+.section {
+  padding: 80px 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* ✨ Section Title (Fudvira Signature Style) */
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: var(--font-primary);
+  background: linear-gradient(90deg, var(--dark-green), var(--light-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+/* 🌿 Decorative underline (soft organic feel) */
+.section-title::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: var(--light-green);
+  border-radius: 6px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+/* 📝 Subtitle (description text) */
+.section-subtitle {
+  font-size: 16px;
+  color: #666;
+  max-width: 600px;
+  margin: 16px auto 50px;
+  line-height: 1.6;
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 26px;
+  }
+  .section-subtitle {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
 }

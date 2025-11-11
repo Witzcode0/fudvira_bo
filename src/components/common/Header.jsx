@@ -2,6 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import "../../styles/header.css";
 import logo from "../../assets/images/logo/logo.png";
 import { FiUser, FiHeart, FiShoppingCart, FiSearch, FiMenu, FiX } from "react-icons/fi";
+import { NavLink, Link } from "react-router-dom";
+
+
 
 function Header() {
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -30,6 +33,20 @@ function Header() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  useEffect(() => {
+  const handleScroll = () => {
+    if(window.scrollY > 20){
+      document.querySelector('.header').classList.add('header-small');
+    } else {
+      document.querySelector('.header').classList.remove('header-small');
+    }
+  };
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
+  
 
   return (
     <>
@@ -107,10 +124,10 @@ function Header() {
       {/* ================= NAVIGATION MENU ================= */}
       <nav className="main-menu">
         <ul className="menu-list container">
-          <li>Home</li>
-          <li>About</li>
-          <li>Products</li>
-          <li>Contact</li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/products">Products</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
         </ul>
       </nav>
 
@@ -149,13 +166,14 @@ function Header() {
             </div>
           </div>
 
-          {/* Mobile Nav */}
           <ul className="mobile-nav-links">
-            <li onClick={() => setMobileMenuOpen(false)}>Home</li>
-            <li onClick={() => setMobileMenuOpen(false)}>About</li>
-            <li onClick={() => setMobileMenuOpen(false)}>Products</li>
-            <li onClick={() => setMobileMenuOpen(false)}>Contact</li>
+            <li><NavLink to="/" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMobileMenuOpen(false)}>Home</NavLink></li>
+            <li><NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMobileMenuOpen(false)}>About</NavLink></li>
+            <li><NavLink to="/products" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMobileMenuOpen(false)}>Products</NavLink></li>
+            <li><NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMobileMenuOpen(false)}>Contact</NavLink></li>
           </ul>
+
+
         </div>
       </div>
 
