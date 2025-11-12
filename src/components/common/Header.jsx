@@ -34,17 +34,17 @@ function Header() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  useEffect(() => {
-  const handleScroll = () => {
-    if(window.scrollY > 20){
-      document.querySelector('.header').classList.add('header-small');
-    } else {
-      document.querySelector('.header').classList.remove('header-small');
-    }
-  };
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+//   useEffect(() => {
+//   const handleScroll = () => {
+//     if(window.scrollY > 20){
+//       document.querySelector('.header').classList.add('header-small');
+//     } else {
+//       document.querySelector('.header').classList.remove('header-small');
+//     }
+//   };
+//   window.addEventListener("scroll", handleScroll);
+//   return () => window.removeEventListener("scroll", handleScroll);
+// }, []);
 
   
 
