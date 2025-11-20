@@ -499,7 +499,7 @@
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 1024px) { .search-bar { width: 55%; } }
 @media (max-width: 768px) {
-  .search-bar, .header-icons, .main-menu { display: none !important; }
+  .search-bar, .header-icons{ display: none; }
   .menu-toggle { display: block; }
 }
 @media (max-width: 480px) { .logo img { height: 52px; } }
